@@ -335,10 +335,24 @@ public class ProductCont {
 	}//end
 	
 	@ResponseBody
-	@RequestMapping(value = "/product/addcart", method = RequestMethod.POST)
-	public int addcart(@RequestParam int cnt, @RequestParam int pro_no, @RequestParam String m_id) {
-		return productDao.addcart(cnt, pro_no, m_id);
-	}
+    @RequestMapping(value = "/product/addcart", method = RequestMethod.POST)
+    public int addcart(@RequestParam int cnt, @RequestParam int pro_no, @RequestParam String m_id) {
+      
+       Map<String, Object> map = new HashMap<>();
+      
+       map = productDao.cartcntselect(pro_no, m_id);
+       //System.out.println(map);
+      
+       if (map == null || map.isEmpty()) {
+          //System.out.println(1); 
+          return productDao.addcart(cnt, pro_no, m_id);
+       }else {
+          //System.out.println(0); 
+          int cart_no = (int) map.get("cart_no");
+          return productDao.updatecart(pro_no, cart_no, cnt, m_id);
+       }//if end
+    
+    }//end 
 	
 	@ResponseBody
 	@RequestMapping(value = "/product/like", method = RequestMethod.POST)

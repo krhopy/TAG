@@ -326,9 +326,9 @@ function topFunction() {
 			<!-- 최신순/인기순/좋아요순 카테고리 시작 -->
 				<span class="category">
 			    	<select id="category" name="category" onchange="if(this.value) location.href=(this.value);">
-			         	<option value="/concert" <c:if test="${categoryOption eq '최신순'}">selected</c:if>>최신순</option>
-			         	<option value="/concert/popularAll" <c:if test="${categoryOption eq '인기순'}">selected</c:if>>인기순</option>
-			         	<option value="/concert/likeAll" <c:if test="${categoryOption eq '좋아요순'}">selected</c:if>>좋아요순</option>
+	                  <option value="/concert" <c:if test="${orderby == 'r'}">selected</c:if> >최신순</option>
+	                  <option value="/concert/popularAll" <c:if test="${orderby == 'p'}">selected</c:if> >인기순</option>
+	                  <option value="/concert/likeAll" <c:if test="${orderby == 'l'}">selected</c:if> >좋아요순</option>
 			  	 	</select>
 			    </span><!-- 최신순/인기순/좋아요순 카테고리 끝 -->
 			</div>

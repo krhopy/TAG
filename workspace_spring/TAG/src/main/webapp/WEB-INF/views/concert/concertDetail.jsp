@@ -550,6 +550,7 @@ line-height : 10px;
 				<input type="hidden" name="title" value="${concert.title}" />
 				<!-- c_price hidden 값 -->
 				<input type="hidden" name="price" value="${concert.price}" />
+				
 		    	<div id="mainContainer">
 					<!-- include 영역 시작 -->
 					<c:choose>

@@ -170,7 +170,7 @@
 	height:100%; 
 	--width: 900px; 
 	width: 70%; 
-	margin-left:120px;
+	--margin-left:120px;
 	float:left;
 }
 

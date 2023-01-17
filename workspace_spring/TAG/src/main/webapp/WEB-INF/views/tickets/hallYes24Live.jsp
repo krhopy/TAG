@@ -60,7 +60,7 @@
 
 
 .stageBar {
-	width: 845px;
+	width: 837px;
 	height:40px;
 	background: lightgrey;
 	text-align:center;
@@ -164,9 +164,11 @@
 	<div id="rseatX" style="display: inline-block; margin-left:40px;  margin-top:20px;">
 		<h6>지정좌석 X구역</h6>
 		<table style="border-spacing: 0;">
+<!-- 지정좌석 불균형적인 공간 빼주는 부분 -->
 			<tr>
 			<!-- X구역 행마다 들어가는 빈공간 배열 선언 -->
 			<c:set var="nullX" value="<%=new int[] {0,1,2,3,3,5,6} %>"/>
+			<!-- nullX만큼 없애준다 -->
 			<!-- "seatX" 좌석의 고유번호(flags의 갯수와 일치) -->
 			<c:set var="seatX" value="0"/>
 			
@@ -174,7 +176,7 @@
 				<c:forEach var="nullXtd" begin="1" end="${nullX[r-1]}" step="1">
 					<td></td>
 				</c:forEach><!-- nullX end -->
-				<c:forEach var="c" begin="1" end="${15-nullX[r-1]+1}" step="1">
+				<c:forEach var="c" begin="1" end="${15-nullX[r-1]+1}" step="1"><!-- 15는 한 행의 최대 좌석수 - nullX는 위에 있는 빈공간 배열을 가져와서 r-1(index가 0부터 시작하기때문에 -1) 하고 +1은 1열,2열 ... 7열 표시해주기 위함. -->
 					<td>
 						<c:if test="${c <= (15-nullX[r-1])}">
 							<!-- ${seatX} 1씩 늘어나게하기 -->
@@ -206,6 +208,7 @@
 				<c:forEach var="nullYLtd" begin="1" end="${nullYL[r-1]}" step="1">
 					<td></td>
 				</c:forEach><!-- nullYL end -->
+				<!-- r=row, c=calum 열? 머냐 -->
 				<c:forEach var="c" begin="1" end="${28-nullYAll[r-1]}" step="1">
 					<c:choose><%-- if else문 --%>
 						<c:when test="${r == 7 && c <= 11}"><!-- 7열 11번째 좌석까지 생성 -->
@@ -290,7 +293,7 @@ var flagsZ = new Array(86);
 //flags 초기 설정
 //A구역
 for(let i = 0; i < flagsA.length; i++){
-	flagsA[i] = true;
+	flagsA[i] = true; //true 누르지 않은 상태.
 }//for end
 //B구역
 for(let i = 0; i < flagsB.length; i++){
@@ -327,12 +330,15 @@ for(let i = 1; i < flagsA.length; i++){
 //X구역 R등급, S등급, A등급
 for(let i = 1; i < flagsX.length; i++){ 
 	if(i <= 29){
+		// 1-29까지는 R등급
 		$("#btnX"+i).addClass("R");
 		//$("#btnX"+i)[0].style.background = "mediumslateblue"; //R등급 보라색
 	}else if(i > 29 && i <= 76){
+		// 29 - 79까지는 S등급
 		$("#btnX"+i).addClass("S");
 		//$("#btnX"+i)[0].style.background = "dodgerblue"; //S등급 청회색
 	}else if(i > 76){
+		// 76이상은 A등급
 		$("#btnX"+i).addClass("A");
 		//$("#btnX"+i)[0].style.background = "darkcyan"; //A등급 민트
 	}//if end
@@ -378,7 +384,7 @@ for(let i = 1; i < flagsZ.length; i++){ //Z구역 R등급, S등급, A등급
 }//for end
 
 
-//스탠딩 좌석 추가와 삭제
+// [스탠딩 좌석 추가와 삭제]
 function standAdd(SeatNum, section, flagNum){ //좌석번호, 구역이름, 버튼고유번호
 	var snum=$(SeatNum).val(); //number 좌석번호
 	var swt=false; //switch flag=on/off 해주는 불린값
@@ -401,16 +407,18 @@ function standAdd(SeatNum, section, flagNum){ //좌석번호, 구역이름, 버�
 	}//switch end
 	
 	if(swt){ //좌석을 선택할 때
+		//색상조절 + 오른쪽에 선택 좌석 표시
 		let input="";
 		input += "<input type='text' class='input";
 		input += 									section+flagNum;
 		input += 	"' readonly value='";
 		input += "R석 1층-스탠딩"+section+"구역 입장번호-"+snum;
 		input += "'>";
-		$("#btn"+section+flagNum).addClass("on"); //#btnA+seatNo에 class="on" 추가
+		$("#btn"+section+flagNum).addClass("on"); //#btnA+seatNo에 class="on" 추가 -> 다슬css에 class="on" 있음
 		$("#panel").append(input); //<div id="panel">안에 <input class=input+section+flagNum></input> 생성
 		$("#panel").scrollTop($("#seatAddFormjsp").height());
 		
+		//오른쪽 요약에 html로 선택좌석 나타내줌
 		let input2="";
 		input2 += "<input type='text' class='input";
 		input2 += 									section+flagNum;
@@ -420,6 +428,7 @@ function standAdd(SeatNum, section, flagNum){ //좌석번호, 구역이름, 버�
 		$("#addedSeat").append(input2);
 		countSeats(); //좌석수 계산하기
 		
+		//선택된 좌석 선택 불가하게 막기위함 (hidden 속성 줌)
 		let input3="";
 		input3 += "<input type='hidden' class='input";
 		input3 += 									section+flagNum;
@@ -443,6 +452,7 @@ function rseatAdd(SeatNum, section, row, flagNum){ //좌석번호, 구역이름,
 	var swt=false; //switch flag=on/off 해주는 불린값
 	var grade=$(SeatNum).attr('class'); //좌석등급을 클래스명으로 가져옴
 	
+	//지정좌석 등급 324행 가보기
 	switch (section){
 		case "X" : 
 			if(flagsX[flagNum]){ //좌석을 선택할 때

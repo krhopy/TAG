@@ -54,7 +54,8 @@
 
 
 
-.stageBar {
+.stageBar {	
+	width: 837px;
 	height:40px;
 	background: lightgrey;
 	text-align:center;
@@ -152,7 +153,7 @@
 	<div class="stageBar">
 		<b>STAGE</b>
 	</div>
-	
+	<div style="display:block;">
 	<div id="standA" style="display: inline-block; margin-right:40px; margin-top:20px;">
 		<h6>스탠딩 A구역</h6>
 		<table style="border-spacing: 0;">
@@ -183,6 +184,7 @@
 			</c:forEach>
 			</tr>
 		</table>
+	</div>
 	</div>
 	<div id="standC" style="display: inline-block; --margin-right:40px; margin-top:20px;">
 		<h6>스탠딩 C구역</h6>
@@ -232,7 +234,7 @@
 	<div class="stageBar">
 		<b>STAGE</b>
 	</div>
-	
+	<div style="display:block;">
 	<div id="rseatV">
 		<h6>지정좌석 V구역</h6>
 		<table style="border-spacing: 0;">
@@ -272,6 +274,7 @@
 			</c:forEach><!-- r end -->
 		</table>
 	</div><!-- id="rseatW" end -->
+	</div>
 	<div id="rseatX">
 		<h6>지정좌석 X구역</h6>
 		<table style="border-spacing: 0;">
@@ -383,13 +386,6 @@
 		</table>
 	</div><!-- id="rseatZ" end -->
 </div><!-- map2Fjsp end -->	
-
-
-
-
-
-
-
 
 
 <script>

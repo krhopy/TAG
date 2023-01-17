@@ -378,7 +378,26 @@ public class ProductDAO {
 		return sqlSession.selectList("product.recentProductConcert",m_id);
 	}//recentProductConcert end
 	
-	
+	public Map<String, Object> cartcntselect(int pro_no, String m_id) {
+	      Map<String, Object> map = new HashMap<>();
+	      
+	      map.put("pro_no", pro_no);
+	      map.put("m_id", m_id);
+	      
+	      return sqlSession.selectOne("product.cartcntselect",map);
+	 }
+	   
+	public Integer updatecart(int pro_no, int cart_no, int cnt, String m_id) {
+	      Map<String, Object> map = new HashMap<>();
+	      
+	      map.put("pro_no", pro_no);
+	      map.put("cart_no", cart_no);
+	      map.put("cnt", cnt);
+	      map.put("m_id", m_id);
+	      
+	      
+	      return sqlSession.update("product.updatecart",map);
+	}
 	
 	
 }//class end

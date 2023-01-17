@@ -422,9 +422,9 @@ function hearticon(this1) {
 			<c:if test="${category == null}">
 			<span class="category">
 		    	<select id="category" name="category" onchange="if(this.value) location.href=(this.value);">
-		         	<option value="/list.do">최신순</option>
-		         	<option value="/list.do/popularAll">인기순</option>
-		         	<option value="/list.do/likeAll">좋아요순</option>
+                  <option value="/list.do" <c:if test="${orderby == 'r'}">selected</c:if> >최신순</option>
+                  <option value="/list.do/popularAll" <c:if test="${orderby == 'p'}">selected</c:if> >인기순</option>
+                  <option value="/list.do/likeAll" <c:if test="${orderby == 'l'}">selected</c:if> >좋아요순</option>
 		  	 	</select>
 		    </span><!-- 최신순/인기순/좋아요순 카테고리 끝 -->
 			</c:if>
@@ -432,9 +432,9 @@ function hearticon(this1) {
 			<c:if test="${category != null}">
 			<span class="category">
 		    	<select id="category" name="category" onchange="if(this.value) location.href=(this.value);">
-		         	<option value="/list.do?category=${category}">최신순</option>
-		         	<option value="/list.do/popularCateg?category=${category}">인기순</option>
-		         	<option value="/list.do/likeCateg?category=${category}">좋아요순</option>
+                  <option value="/list.do" <c:if test="${orderby == 'r'}">selected</c:if> >최신순</option>
+                  <option value="/list.do/popularAll" <c:if test="${orderby == 'p'}">selected</c:if> >인기순</option>
+                  <option value="/list.do/likeAll" <c:if test="${orderby == 'l'}">selected</c:if> >좋아요순</option>
 		  	 	</select>
 		    </span><!-- 최신순/인기순/좋아요순 카테고리 끝 -->
 			</c:if>

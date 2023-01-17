@@ -362,6 +362,18 @@
 		VALUES (#{m_id}, #{pro_no}, #{cnt})
 	</insert>
 	
+	<update id="updatecart" parameterType="java.util.Map">
+        UPDATE product_cart
+        SET cnt = cnt + #{cnt}
+        WHERE pro_no = #{pro_no} AND m_id = #{m_id} AND cart_no = #{cart_no}
+    </update>
+   
+    <select id="cartcntselect" parameterType="java.util.Map" resultType="java.util.Map">
+       SELECT cnt, cart_no
+       FROM product_cart
+       WHERE m_id = #{m_id} AND pro_no = #{pro_no}
+    </select>
+	
 	<insert id="like" parameterType="java.util.Map">
 		INSERT INTO member_like(m_id, like_cd,like_li)
 		VALUES (#{m_id},'P',#{pro_no})

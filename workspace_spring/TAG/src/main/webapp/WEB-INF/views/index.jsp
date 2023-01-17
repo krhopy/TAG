@@ -321,7 +321,7 @@
 
 	<div class="owl-carousel owl-single home-slider">
 		<div class="item">
-			<div class="untree_co-hero" style="background-image: url('images/헤더3.jpg');">
+			<div class="untree_co-hero" style="background-image: url('/images/header3.jpg');">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-6">
@@ -340,7 +340,7 @@
 
 
 		<div class="item">
-			<div class="untree_co-hero" style="background-image: url('images/헤더6.jpg');">
+			<div class="untree_co-hero" style="background-image: url('/images/header6.jpg');">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-6">

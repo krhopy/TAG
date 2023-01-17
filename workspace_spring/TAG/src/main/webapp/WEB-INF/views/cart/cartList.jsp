@@ -493,7 +493,7 @@ function topFunction() {
 							    <tr>
 								    <td style="padding:0;">
 								    	<div class="product-imageandicon">
-											<a href="">
+											<a href="/product/${row.pro_no}">
 											<img src="/storage/${row.postername}" width="140">
 											</a>
 										</div>

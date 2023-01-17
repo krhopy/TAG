@@ -9,7 +9,7 @@
 
 .barBtn{
 	padding-left:470px;
-	height:80px;
+	--height:80px;
 }
 
 .barBtn .bar1, .barBtn .bar2, .barBtn .bar3{
