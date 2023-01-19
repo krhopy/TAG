@@ -11,6 +11,7 @@
 	#no { text-align: center; }
 	#mst { text-align: center; }
 	#rdate { text-align: center; }
+	a {color: black;}
 </style>
 
 <script>

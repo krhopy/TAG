@@ -26,9 +26,9 @@
 					SELECT pro_no, category, product.c_no, concert.title, p_id, product.pro_name, stock, color, size, product.price, product.postername, status, regdate
 					FROM product INNER JOIN concert 
 					ON product.c_no = concert.c_no
-					WHERE  status = 'Y' 
-					ORDER BY regdate DESC
-			) CC , (SELECT @RNO := 0) BB 
+					WHERE  status = 'Y'
+					ORDER BY pro_no DESC LIMIT 100000
+			) CC , (SELECT @RNO := 0) BB
 		) AA 
 		WHERE r >= #{start} AND r <= #{end}
 		]]>

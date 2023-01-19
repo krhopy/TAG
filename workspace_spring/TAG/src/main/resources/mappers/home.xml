@@ -5,6 +5,7 @@
 	<select id="recently_pro" resultType="java.util.Map">
 		    select pro_no, pro_name, postername, price 
             from product 
+            where status = 'Y'
             order by pro_no desc 
             limit 7
 	</select>
