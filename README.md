@@ -20,7 +20,7 @@
 - Language<br> <img src="https://img.shields.io/badge/Java 1.8-007396?style=flat-square&logo=Java&logoColor=white"/> <img src="https://img.shields.io/badge/JDK 17-007396?style=flat-square&logo=Java&logoColor=white"/>
 - WAS<br> <img src="https://img.shields.io/badge/Apache Tomcat 9.0.58-F8DC75?style=flat-square&logo=Apache Tomcat&logoColor=black"/>
 - DBMS<br> <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=MariaDB&logoColor=white"/>
-- Spring Boot<br> <img src="https://img.shields.io/badge/Spring Boot 2.7.5-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/> <img src="https://img.shields.io/badge/maven-C71A36?style=flat-square&logo=Apache Maven&logoColor=white"/> <img src="https://img.shields.io/badge/MyBatis-000000?style=flat-square&logo=Java&logoColor=white"/> 
+- Spring Boot<br> <img src="https://img.shields.io/badge/Spring Boot 2.7.5-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/> <img src="https://img.shields.io/badge/maven-C71A36?style=flat-square&logo=Apache Maven&logoColor=white"/> <img src="https://img.shields.io/badge/MyBatis-000000?style=flat-square&logo=Java&logoColor=white"/>
 - Web Hosting<br> <img src="https://img.shields.io/badge/Cafe24-1578D3?style=flat-square&logo=Java&logoColor=white"/>
 
 <br><br><br>
@@ -53,9 +53,10 @@
 - #### 📍 일반회원과 판매자회원으로 회원가입 혹은 로그인을 해보세요!
   - 일반회원 : kangsun / 강선1234
   - 판매자회원 : privatecurve / 판매자1234
-  
+
 <br><br><br>
 
 ### TAG 더보기
-[🔗 TAG 제작 상세 PPT 링크 ↗](https://drive.google.com/file/d/1dUEhDUE2ZXzDfZvkGbDzDaq_Sfswl2zC/view?usp=sharing) <br>
+[🔗 DB 설계도 ↗](https://drive.google.com/file/d/1gu0M5L6syH60w94wfjl7lboml_Crzflb/view?usp=sharing) <br>
+[🔗 TAG 제작 상세 PPT 링크 ↗](https://drive.google.com/file/d/1dUEhDUE2ZXzDfZvkGbDzDaq_Sfswl2zC/view?usp=sharing)  <br>
 [🔗 TAG 웹사이트 호스팅 링크 ↗](http://krhopy.cafe24.com)

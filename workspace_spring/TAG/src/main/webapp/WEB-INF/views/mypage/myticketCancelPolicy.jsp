@@ -5,12 +5,11 @@
 
 <!-- 본문 시작 -->
 <style>
-	.leftcontent, .box {
-		border:1px solid black;
-	}
-	.leftcontent div, .rightcontent {
-		padding:10px;
-	}
+	a {
+		font-family: 'Noto Sans KR', sans-serif;
+		color: black;
+		font-size: 13px; }
+		
 	.clickInfo {
 		text-align: center;
 		margin: 10px;
@@ -95,6 +94,15 @@
 	  color: black;
 	  border: 1px solid black;
 	}
+	
+	
+	.side_liT {
+	font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
 </style>
 
 
@@ -107,27 +115,55 @@
 	<h3 style="text-align: center;">취소/환불 정책 안내</h3>
 </div>
 
-<div class="leftcontent" style="float:left; width:15%; margin-right:5%; height:100%;">
-   <div><b>${s_m_id}</b> 님</div>
-   <div><a href="/mypage/memberupdateG">회원 정보 수정</a></div>
-   <div class="box">
-      <div><b>MY티켓</b>
-         <div><a href="/mypage/myticket">- 예매 확인 / 취소</a></div>   
-      </div>
-      <div><b>MY상품</b>
-         <div><a href="/mypage/myproduct">- 상품 구매내역</a></div>   
-         <div><a href="#">- 나의 문의내역</a></div>
-      </div>
-      <div><b>좋아요</b>
-         <div><a href="/mypage/mylike">- 관심 공연 / 관심 상품</a></div>
-      </div>
-      <div><b>MY쿠폰 / MY포인트</b>
-         <div><a href="/couponDetail/detail">- 보유 쿠폰</a></div>
-         <div><a href="/pointDetail/detail">- 보유 포인트</a></div>
-      </div>
-   </div>
+   <div class="leftcontent">
+      <div class="stickyP" style="height: 5%">
+         <p class="fontJ" style="font-size: 20px; font-weight: 500;">
+            ${s_m_id}&nbsp;님 <!-- 세션 아이디 -->
+         </p>
+      <br>
+      <div class="stickyC" style="position: sticky; top: 100px; padding-bottom: 100px;">
+         <ul style="font-size:13px; list-style-type: none; padding-left:0px;">
+            <li class="side_liT">My ticket
+               <li>&nbsp;<a href="/mypage/myticket" style="color:black; font-size: 12px;">- 예매 확인 / 취소</a></li>
+            </li>
+            <br>
+            <li class="side_liT">My product
+               <li>&nbsp;<a href="/mypage/myproduct" style="color:black; font-size: 12px;">- 상품 구매내역</a></li>
+               <li>&nbsp;<a href="/mypage/myqna" style="color:black; font-size: 12px;">- 나의 문의내역</a></li>
+            </li>
+            <br>
+            <li class="side_liT">My like
+               <li>&nbsp;<a href="/mypage/mylike" style="color:black; font-size: 12px;">- 관심 공연 / 관심 상품</a></li>
+            </li>
+            <br>
+            <li class="side_liT">My coupon
+               <li>&nbsp;<a href="/couponDetail/detail" style="color:black; font-size: 12px;">- 보유 쿠폰</a></li>
+            </li>
+            <br>
+            <li class="side_liT">My point
+               <li>&nbsp;<a href="/pointDetail/detail" style="color:black; font-size: 12px;">- 보유 포인트</a></li>
+            </li>
+            <br>
+            <li style="font-size: 12px; font-weight: 400;"><a href="/mypage/memberupdateG" style="color: #bcbcbc;">회원 정보 수정</a></li>
+         </ul>
+      </div><!-- stickyC end -->
+      </div><!-- stickyP end -->
+   </div><!-- leftcontent end -->
 
-</div><!-- leftcontent end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="rightcontent" style="float:right; width:80%;">

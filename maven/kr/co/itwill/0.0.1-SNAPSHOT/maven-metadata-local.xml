@@ -3,7 +3,7 @@
   <groupId>kr.co</groupId>
   <artifactId>itwill</artifactId>
   <versioning>
-    <lastUpdated>20230119062523</lastUpdated>
+    <lastUpdated>20230125142351</lastUpdated>
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
@@ -11,12 +11,12 @@
       <snapshotVersion>
         <extension>war</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20230119062523</updated>
+        <updated>20230125142351</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
         <value>0.0.1-SNAPSHOT</value>
-        <updated>20230119062523</updated>
+        <updated>20230125142351</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

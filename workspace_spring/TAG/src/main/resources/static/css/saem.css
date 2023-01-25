@@ -285,7 +285,7 @@ textarea:focus {
 
 .side_liT {
 	font-weight: bold;
-    font-family: 'Jost';
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     padding-bottom: 10px;
 }

@@ -95,12 +95,11 @@
 					<th>주문번호</th>
 					<th>주문금액</th>
 					<th>쿠폰 할인<br>금액</th>
-					<th>쿠폰<br>번호</th>
 					<th>사용<br>포인트</th>
 					<th>배송비</th>
 					<th>최종 결제<br>금액</th>
-					<th>포인트<br>적립금</th>
-					<th>받는<br>사람</th>
+					<th>적립금</th>
+					<th>받는사람</th>
 					<th>주소</th>
 					<th>핸드폰 번호</th>
 					<th>배송<br>메세지</th>
@@ -116,7 +115,6 @@
 					<td>
 						<fmt:formatNumber value="${row.cp_dis}" pattern="#,###"/>
 					</td>
-					<td>${row.cp_no}</td>
 					<td>${row.pt_minus}</td>
 					<td>
 						<fmt:formatNumber value="${row.d_fee}" pattern="#,###"/>
