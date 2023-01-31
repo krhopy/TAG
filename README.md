@@ -8,10 +8,28 @@
 
 ## 1. 팀원구성 및 본인 담당페이지 (총 4인)
 [본인 담당페이지]
-- 일반 / 판매자 회원가입 및 로그인
-- 공연 리스트 / 공연 상세
-- 상품 리스트
-- 장바구니
+- #### 일반 / 판매자 회원가입 및 로그인 
+  - `Ajax` , `jQuery` 를 이용한 비동기식 로그인, 회원가입 구현
+  - `Javacript` 유효성 검사 실시
+  - `HttpSession` 으로 로그인 유지, `Cookie` 아이디 저장
+- #### 공연 리스트 / 공연 상세 
+  - 공연 리스트
+    - 공연 전체, 예정 공연, 지난 공연 카테고리 분리
+    - 공연 날짜 D-day 카운트
+    - 공연 검색 기능
+  - 공연 상세
+    - 공연 날짜 달력에 표시
+    - 선예매 기간 문구 노출
+    - 좋아요 기능
+- #### 상품 리스트 
+  - 카테고리별 상품 목록, 공연별 상품 목록
+  - 좋아요 기능
+  - 상품 검색 기능
+  - 페이징 
+- #### 장바구니 
+  - 선택 삭제
+  - 수량 증가 시 상품 가격 증가와 총 주문금액 증가
+  - 총 결제 금액 계산 (50,000원 이상 배송비 할인)
 
 <br><br><br>
 
@@ -57,6 +75,7 @@
 <br><br><br>
 
 ### TAG 더보기
+[🔗 TAG 포트폴리오 ↗](https://krhopy.github.io/Myportfolio/project-1.html) <br>
 [🔗 DB 설계도 ↗](https://drive.google.com/file/d/1gu0M5L6syH60w94wfjl7lboml_Crzflb/view?usp=sharing) <br>
 [🔗 TAG 제작 상세 PPT 링크 ↗](https://drive.google.com/file/d/1dUEhDUE2ZXzDfZvkGbDzDaq_Sfswl2zC/view?usp=sharing)  <br>
 [🔗 TAG 웹사이트 호스팅 링크 ↗](http://krhopy.cafe24.com)
