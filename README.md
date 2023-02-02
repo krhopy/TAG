@@ -45,7 +45,7 @@
 
 ## 3. 개발 일정
 ### 2022.11.17 - 2022.12.27 (총 5주)
-- **1week**: 주제선정, Database 테이블 설계
+- **1week**: Database 테이블 설계
 - **2week**: UI 가이드맵, 개발 환경 설정
 - **3week**: Front-end, Back-end
 - **4week**: Front-end, Back-end
